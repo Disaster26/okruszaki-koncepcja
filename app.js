@@ -1,5 +1,6 @@
 (function(){
 var d=document;
+var top=d.querySelector('.top');function sc(){top.classList.toggle('mala',window.scrollY>30)}sc();window.addEventListener('scroll',sc,{passive:true});
 var rok=d.getElementById('rok');if(rok)rok.textContent=new Date().getFullYear();
 /* menu mobilne */
 var b=d.querySelector('.burger'),p=d.getElementById('panel');
