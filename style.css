@@ -76,11 +76,10 @@ p{margin:0 0 1em}
 @media (min-width:761px){.hero .wrap{width:auto;margin:0;padding-left:clamp(28px,5.5vw,120px);padding-right:28px;max-width:calc(640px + 5.5vw)}}
 @media (min-width:1600px){.hero{min-height:min(calc(100svh - 81px),1100px)}}
 @media (max-width:760px){
- .hero{min-height:calc(100svh - 67px);align-items:flex-end;border-bottom-width:10px}
- .hero{background:#003a3c}
- .hero img.tlo{height:64%;object-position:78% 40%}
- .hero::after{background:linear-gradient(0deg,#003a3c 0%,#003a3c 40%,rgba(0,58,60,.55) 52%,rgba(0,58,60,0) 66%)}
- .hero .wrap{padding:150px 0 26px}
+ .hero{display:block;min-height:0;background:#003a3c;border-bottom-width:10px}
+ .hero img.tlo{position:relative;inset:auto;display:block;height:min(50svh,430px);min-height:280px;object-position:78% 40%}
+ .hero::after{bottom:auto;height:min(50svh,430px);min-height:280px;background:linear-gradient(0deg,#003a3c 0%,rgba(0,58,60,.7) 22%,rgba(0,58,60,0) 48%)}
+ .hero .wrap{margin-top:-64px;padding:0 0 28px}
  .hero .lead{margin-bottom:24px}
  .hero .btns{flex-direction:column}
  .hero .btn{width:100%}
