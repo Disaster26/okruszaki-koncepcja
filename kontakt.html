@@ -25,11 +25,11 @@
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
 
 </style>
-<script>/* warianty do porównania w podglądzie: ?wariant=zielone-tytuly | okrag-logo | oba | obecny, ?oplaty=poprzednie | nowe */
+<script>/* warianty do porównania w podglądzie: ?wariant=zielone-tytuly | okrag-logo | oba | obecny | linia-okrag-pomaranczowy | linia-okrag-zielony, ?oplaty=poprzednie | nowe */
 (function(){try{var h=document.documentElement,q=new URLSearchParams(location.search),s=sessionStorage,w=q.get('wariant'),o=q.get('oplaty');
-if(w){s.setItem('okr-t',(w=='zielone-tytuly'||w=='oba')?'1':'0');s.setItem('okr-l',(w=='okrag-logo'||w=='oba')?'1':'0')}
+if(w){s.setItem('okr-t',(w=='zielone-tytuly'||w=='oba')?'1':'0');s.setItem('okr-l',(w=='okrag-logo'||w=='oba')?'1':'0');s.setItem('okr-k',/^linia-/.test(w)?'1':'0');s.setItem('okr-c',w=='linia-okrag-pomaranczowy'?'1':w=='linia-okrag-zielony'?'2':'0')}
 if(o){s.setItem('okr-o',o=='poprzednie'?'1':'0')}
-if(s.getItem('okr-t')=='1')h.classList.add('w-tytuly');if(s.getItem('okr-l')=='1')h.classList.add('w-okrag');if(s.getItem('okr-o')=='1')h.classList.add('op-stare')}catch(e){}})();</script>
+if(s.getItem('okr-t')=='1')h.classList.add('w-tytuly');if(s.getItem('okr-l')=='1')h.classList.add('w-okrag');if(s.getItem('okr-o')=='1')h.classList.add('op-stare');if(s.getItem('okr-k')=='1')h.classList.add('w-linia');var c=s.getItem('okr-c');if(c=='1')h.classList.add('w-kolo-p');if(c=='2')h.classList.add('w-kolo-z')}catch(e){}})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ChildCare", "name": "Żłobek Lucky OKRUSZAKI", "url": "https://okruszaki.pl/", "logo": "https://okruszaki.pl/img/logo-600.png", "image": "https://okruszaki.pl/img/logo-600.png", "telephone": "+48721107674", "email": "biuro@luckyokruszaki.com", "address": {"@type": "PostalAddress", "streetAddress": "ul. Beskidzka 348", "postalCode": "43-378", "addressLocality": "Rybarzowice", "addressCountry": "PL"}, "openingHours": "Mo-Fr 06:30-16:30", "sameAs": ["https://www.facebook.com/people/%C5%BB%C5%82obek-Lucky-Okruszaki/61586409999313/"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://okruszaki.pl/"}, {"@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://okruszaki.pl/kontakt"}]}</script>
 </head>
 <body>
@@ -74,6 +74,8 @@ if(s.getItem('okr-t')=='1')h.classList.add('w-tytuly');if(s.getItem('okr-l')=='1
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><button class="x" type="button" aria-label="Zamknij">&times;</button><button class="p" type="button" aria-label="Poprzednie">&lsaquo;</button><img alt=""><button class="n" type="button" aria-label="Następne">&rsaquo;</button><div class="licz"></div></div>
 <div class="warianty" id="warianty"><button class="w-kup" type="button" aria-expanded="false" aria-controls="w-lista">Warianty do porównania</button>
 <div class="w-lista" id="w-lista">
+<p><b>Linia pod nagłówkiem zakładek</b><span><button type="button" data-w="k" data-v="0">pomarańczowa (obecna)</button><button type="button" data-w="k" data-v="1">ciemnozielona</button></span></p>
+<p><b>Okrąg przy dużym zdjęciu w nagłówku</b><span><button type="button" data-w="c" data-v="0">biały (obecny)</button><button type="button" data-w="c" data-v="1">pomarańczowy</button><button type="button" data-w="c" data-v="2">ciemnozielony</button></span></p>
 <p><b>Tytuły zakładek</b><span><button type="button" data-w="t" data-v="0">białe (obecne)</button><button type="button" data-w="t" data-v="1">ciemnozielone</button></span></p>
 <p><b>Logo</b><span><button type="button" data-w="l" data-v="0">bez okręgu (obecne)</button><button type="button" data-w="l" data-v="1">z cienkim okręgiem</button></span></p>
 <p><b>Zakładka Opłaty, górna część</b><span><button type="button" data-w="o" data-v="0">jaśniejsza (nowa)</button><button type="button" data-w="o" data-v="1">ciemnozielona (poprzednia)</button></span></p>

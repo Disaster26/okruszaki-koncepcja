@@ -271,6 +271,10 @@ form.f .cala{grid-column:1/-1}
 .w-tytuly .pod h1{color:var(--morski)}
 .w-okrag .logo img{box-shadow:0 0 0 4px #fff,0 0 0 6px var(--morski),0 12px 30px rgba(0,50,52,.2)}
 @media (max-width:760px){.w-okrag .logo img{box-shadow:0 0 0 3px #fff,0 0 0 4.5px var(--morski),0 8px 22px rgba(0,50,52,.18)}}
+/* nagłówek zakładek: ciemnozielona linia, okrąg dużego zdjęcia pomarańczowy albo ciemnozielony */
+.w-linia .pod{border-bottom-color:var(--morski)}
+.w-kolo-p .pod-deko .pk1{border-color:var(--terra)}
+.w-kolo-z .pod-deko .pk1{border-color:var(--morski)}
 /* Opłaty: jaśniejsza górna część (propozycja) */
 html:not(.op-stare) .sek-op{background:#eaf4f0;color:var(--tekst)}
 html:not(.op-stare) .sek-op h2{color:var(--morski)}
